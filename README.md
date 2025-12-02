@@ -10,7 +10,7 @@ Supports: **Python 3.10 or higher**
 
 ## ✨ Features
 
-`precise_patterns` is the next major iteration of my earlier project, **Stock-Patterns**.
+`precise_patterns` is the next major iteration of my earlier project, [Stock-Pattern](BennyThadikaran/stock-pattern).
 
 - **Multi-timeframe candle aggregation**
   - Intraday (minute-based) and end-of-day aggregation.
@@ -88,7 +88,7 @@ All components are designed to be composable and stateful.
 
 ## Example
 
-See `example.py` for a partial implementation.
+See [example.py](example.py) for a partial implementation.
 
 ## Documentation
 
