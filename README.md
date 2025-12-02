@@ -1,5 +1,7 @@
 # Precise Patterns
 
+🚧 Work in Progress — Early Development Stage 🚧
+
 **Precise Patterns** is a Python library for real-time detection of stock market chart patterns.
 It provides flexible candle aggregation, pivot detection, and pattern recognition tools designed
 for live trading systems and historical backtesting workflows.
