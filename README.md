@@ -106,7 +106,7 @@ To generate the docs using sphinx:
 
 The package has not been published yet.
 
-For those wishing to tinker, clone or download the repo and run `pip install <path to repo>`
+**For those wishing to tinker**: clone or download the repo and run `pip install <path to repo>`
 
 To install doc dependencies, `pip install <path to repo>[docs]`
 
