@@ -12,9 +12,9 @@ Ensure all core features are unit tested.
 
 #### 🚧 Core Tasks
 
-- [*] Implement Candle aggregation modules for EOD and minute based timeframes.
-- [*] Implement Pivot detection modules
-- [*] Setup pyproject and prepare for packaging & publishing
+- [x] Implement Candle aggregation modules for EOD and minute based timeframes.
+- [x] Implement Pivot detection modules
+- [x] Setup pyproject and prepare for packaging & publishing
 
 - [ ] **State management**
   - Maintain internal state to detect and correctly handle duplicate candle or pivot events
