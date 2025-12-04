@@ -19,6 +19,7 @@ Contents
    core
    aggregators
    reader
+   patterns
 
 
 Indices and Tables
