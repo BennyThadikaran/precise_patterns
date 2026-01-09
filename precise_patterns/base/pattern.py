@@ -64,15 +64,12 @@ class BasePattern(ABC):
 
 class Registry:
     """
-    Registry for managing pattern classes and their instances.
+    Registry for managing pattern classes.
 
-    This class stores registered subclasses of :class:`BasePattern`
-    and provides factory-like access to instantiated pattern objects.
-    Only one instance of each named pattern is created (singleton per name).
+    This class stores registered subclasses of :class:`BasePattern`.
     """
 
     _register: Dict[str, type] = {}
-    _instances: Dict[str, BasePattern] = {}
 
     @classmethod
     def register(cls, subcls: type):
@@ -99,19 +96,6 @@ class Registry:
         cls._register[subcls.name] = subcls
 
     @classmethod
-    def get_instance(cls, name):
-        """
-        Return an already-created instance of a registered pattern.
-
-        :param name: The name of the pattern instance to retrieve.
-        :type name: :class:`str`
-        :return: The instantiated pattern object matching the given name.
-        :rtype: :class:`BasePattern`
-        :raises KeyError: If no instance exists for ``name``.
-        """
-        return cls._instances[name]
-
-    @classmethod
     def all(cls):
         """
         Return all registered pattern classes.
@@ -120,26 +104,3 @@ class Registry:
         :rtype: :class:`dict` [:class:`str`, :class:`type`]
         """
         return cls._register
-
-    @classmethod
-    def create(cls, name, **kwargs) -> BasePattern:
-        """
-        Create or retrieve a pattern instance by name.
-
-        If the pattern instance does not yet exist, it is created using any provided
-        keyword arguments. Subsequent calls return the same instance.
-
-        :param name: Name of the pattern to instantiate.
-        :type name: :class:`str`
-        :param kwargs: Keyword arguments forwarded to the pattern constructor.
-        :return: The created or cached pattern instance.
-        :rtype: :class:`BasePattern`
-        :raises KeyError: If ``name`` is not associated with any registered pattern.
-
-        .. warning::
-           Only a single instance is created per pattern name. Subsequent calls
-           with different keyword arguments will *not* create a new instance.
-        """
-        if name not in cls._instances:
-            cls._instances[name] = cls._register[name](**kwargs)
-        return cls._instances[name]
