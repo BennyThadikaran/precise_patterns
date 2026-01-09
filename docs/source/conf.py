@@ -15,7 +15,7 @@ sys.path.insert(0, DIR.as_posix())
 project = "Precise Patterns"
 copyright = "2025, Benny Thadikaran"
 author = "Benny Thadikaran"
-release = "0.0.1-alpha"
+release = "0.2.0-alpha"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

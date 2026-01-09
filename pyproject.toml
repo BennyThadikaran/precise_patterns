@@ -4,7 +4,7 @@ requires = [ "hatchling" ]
 
 [project]
 name = "precise-patterns"
-version = "0.1.0-alpha"
+version = "0.2.0-alpha"
 description = "The next iteration of Stock Patterns"
 readme = "README.md"
 keywords = [ "algo-trading", "patterns", "stock-market" ]
