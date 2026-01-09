@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import ClassVar, Dict
+from .dtypes import Candle, Pivot
 
 
 class BasePattern(ABC):
@@ -50,7 +51,7 @@ class BasePattern(ABC):
         Registry.register(cls)
 
     @abstractmethod
-    def on_pivot(self):
+    def on_pivot(self, pivot: Pivot, candle: Candle):
         """
         Execute logic when a pivot event occurs.
 
