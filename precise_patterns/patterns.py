@@ -1,6 +1,6 @@
 from .base.pattern import BasePattern, Registry
 from .dtypes import Candle, Pivot, EODTimeframes
-from doubly_linked_list import DoublyLinkedList
+from .doubly_linked_list import DoublyLinkedList
 from typing import Dict
 
 
@@ -33,6 +33,8 @@ class PatternManager:
 
 
 class VCP(BasePattern):
+    name = "VCP"
+
     def __init__(self) -> None:
         super().__init__()
         self.dll = DoublyLinkedList()

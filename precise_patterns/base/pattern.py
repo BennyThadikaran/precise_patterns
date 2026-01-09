@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import ClassVar, Dict
-from .dtypes import Candle, Pivot
+from ..dtypes import Candle, Pivot
 
 
 class BasePattern(ABC):
